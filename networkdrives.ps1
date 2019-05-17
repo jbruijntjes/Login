@@ -80,7 +80,4 @@ do {
         (New-Object -ComObject Shell.Application).NameSpace("$($PSItem.DriveLEtter):").Self.Name=$PSItem.Description
 }
 
-Stop-Transcript\
-
-Invoke-RestMethod "https://github.com/jbruijntjes/Login/blob/master/networkdrives.ps1"| Invoke-Expression
-Invoke-RestMethod "https://raw.githubusercontent.com/jbruijntjes/Login/master/networkdrives.ps1" | Invoke-Expression
+Stop-Transcript
