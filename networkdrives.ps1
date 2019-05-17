@@ -1,5 +1,3 @@
-Start-Transcript -Path $(Join-Path $env:temp "DriveMapping.log")
-
 $driveMappingConfig=@()
 
 
@@ -47,7 +45,7 @@ $connected=$false
 $retries=0
 $maxRetries=3
 
-Write-Output "Starting script..."
+
 do {
     
     if (Resolve-DnsName $dnsDomainName -ErrorAction SilentlyContinue){
@@ -79,5 +77,3 @@ do {
 
         (New-Object -ComObject Shell.Application).NameSpace("$($PSItem.DriveLEtter):").Self.Name=$PSItem.Description
 }
-
-Stop-Transcript
