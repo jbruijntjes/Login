@@ -1,16 +1,3 @@
-P:\General                          \\Districon01.districon.local\Project        
-Q:\Departments              \\Districon01.districon.local\Afdeling
-S:\ProjectArchive            \\Districon01.districon.local\ProjectArchief
-T:\Storage                           \\Districon01.districon.local\Storage
-
-
-New-PSDrive –Name "P" –PSProvider FileSystem –Root "\\Districon01.districon.local\Project" –Persist
-New-PSDrive –Name “Q” –PSProvider FileSystem –Root “\\Districon01.districon.local\Project” –Persist
-New-PSDrive –Name “S” –PSProvider FileSystem –Root “\\Districon01.districon.local\ProjectArchief” –Persist
-New-PSDrive –Name “T” –PSProvider FileSystem –Root “\\Districon01.districon.local\Storage” –Persist
-
-
-
 Start-Transcript -Path $(Join-Path $env:temp "DriveMapping.log")
 
 $driveMappingConfig=@()
